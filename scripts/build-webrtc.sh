@@ -15,7 +15,7 @@ if [[ "$(uname)" == "Darwin" ]]; then
 fi
 
 if [ -z "$PARALLELISM" ]; then
-  ninja $TARGETS
+  ninja $TARGETS -j 2
 else
-  ninja $TARGETS -j $PARALLELISM
+  ninja $TARGETS -j 2
 fi
